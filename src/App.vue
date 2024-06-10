@@ -1,7 +1,10 @@
 <template>
   <div>
     <i class="fa fa-solid fa-home"></i>
-    <h1 class="text-center">Test</h1>
+    <h1 class="text-center">Test API</h1>
+    <ul>
+      <li v-for="project in projects" :key="project.id">{{ project.title }}</li>
+    </ul>
   </div>
 </template>
 
@@ -19,7 +22,7 @@ export default {
   methods: {
     getProjects() {
       axios.get(this.store.apiBaseUrl + '/projects').then((res) => {
-        console.log(res);
+        this.projects=res.data.results
       });
     },
   },
