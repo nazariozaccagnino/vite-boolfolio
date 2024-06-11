@@ -44,12 +44,14 @@ export default {
     },
     computed: {
         getImage(){
-            console.log(this.projects);
-            return this.projects.image? this.store.imgBasePath + this.projects.image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png';
+        
+            return this.projects.image? this.store.imgBasePath + this.project.image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/310px-Placeholder_view_vector.svg.png';
         }
     }
 }
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
