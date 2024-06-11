@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    Hello
+    <div class="text-center">
+        <h1>Ciao</h1>
+    </div>
   </div>
 </template>
 
