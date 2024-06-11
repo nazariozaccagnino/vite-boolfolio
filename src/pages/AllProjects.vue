@@ -1,6 +1,5 @@
 <template>
      <div>
-    <i class="fa fa-solid fa-home"></i>
     <h1 class="text-center">Test API</h1>
     <ul>
       <li v-for="project in projects" :key="project.id">{{ project.title }}</li>
