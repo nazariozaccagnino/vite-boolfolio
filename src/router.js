@@ -21,6 +21,7 @@ const router = createRouter({
             name: 'single-project',
             component: SingleProjectComponent,
         },
+        
     ]
 });
 export { router };
