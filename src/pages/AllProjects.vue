@@ -2,10 +2,13 @@
     <div class="container">
         <h1 class="text-center">All projects</h1>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-            <div class="col" v-for="project in projects" :key="project.id">
+            <div class="col" v-if="projects.length>0" v-for="project in projects" :key="project.id">
                 <CardComponent :item="project" />
             </div>
+            <div v-else>
+                Nessun progetto trovato
             </div>
+        </div>
     </div>
 </template>
 
@@ -16,7 +19,7 @@ import CardComponent from '../components/CardComponent.vue'
 
 export default {
     name: 'AllProjects',
-    components:{
+    components: {
         CardComponent
     },
     data() {
@@ -40,6 +43,4 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

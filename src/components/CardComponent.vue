@@ -1,6 +1,5 @@
 <template>
-    <div class="card-group">
-        <div class="card">
+        <div class="card h-100 position-relative">
             <img :src=getImage class="card-img-top" :alt=item.title>
             <div class="card-body">
                 <h5 class="card-title">{{ item.title }}</h5>
@@ -9,11 +8,10 @@
                     <span class="badge text-bg-info">{{ item.type_id }}</span>
                     <span class="badge rounded-pill text-bg-success">Technology</span>
                 </div>
-                <RouterLink :to="{ name: 'single-project', params: { 'slug': item.slug } }" class="btn btn-success">
-                    Leggi articolo</RouterLink>
+                <RouterLink :to="{ name: 'single-project', params: { 'slug': item.slug } }" class="btn btn-success position-absolute bottom-0 end-0 m-2">
+                    Apri progetto</RouterLink>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -36,5 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.card img{
+    object-fit: cover;
+}
 </style>
